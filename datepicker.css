@@ -1,0 +1,64 @@
+.datepicker {
+	width: 380px;
+	font-family: Arial;
+}
+
+.datepicker__value{
+	margin: 10px 6px;
+	font-size: 16px;
+}
+
+.datepicker__header{
+	font-size: 15px;
+	padding: 6px;
+	border: 1px solid #BF9E30;
+	background-color:#FDF6D4;
+	color: #000;
+}
+
+/*clearfix*/
+.clearfix:after {
+	content: "."; /* добавить содержимое: "." */
+	display: block;  /* сделать блоком, т.к. inline не может иметь clear */
+	clear: both;  /* с обоих сторон clear */
+	visibility: hidden; /* сделать невидимым, зачем нам точка внизу? */
+	height: 0;  /* сделать высоту 0, чтобы не занимал место */
+}
+
+.clearfix {
+	zoom: 1;  /* спец-свойство IE */
+}
+
+.datepicker__prev, .datepicker__next{
+	float:left;
+	cursor:pointer;
+	padding: 0px 3px 2px;
+	border-radius: 6px;
+	color: #C77405;
+}
+
+
+.datepicker__next{
+	float:right;
+}
+
+.datepicker__title{
+	text-align: center;
+}
+.datepicker__prev:hover, .datepicker__next:hover{
+	color:#FDF6D4 ;
+	background-color: #C77405;
+}
+
+
+.datepicker__body{
+	margin-top: 10px;
+}
+
+.datepicker__placeholder_pos_left{
+	float: left;
+}
+
+.datepicker__placeholder_pos_right{
+	float:right;
+}

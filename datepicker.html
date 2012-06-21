@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- by Роман Хатипов -->
+	<meta charset="utf-8">
+	<title>datepicker</title>
+	<link href="calendar.css" rel="stylesheet">
+	<link href="datepicker.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://learn.javascript.ru/files/tutorial/js/tmpl.js"></script>
+	<script src="http://learn.javascript.ru/files/tutorial/js/class-extend.js"></script>
+	<script src='eventMixin.js'></script>
+	<script src='templates.js'></script>
+	<script src='calendar.js'></script>
+	<script src='datepicker.js'></script>
+	<script>
+		$(function() {
+			new Datepicker(new Templates(), {elem: $('#datepicker1')})
+					.on('select.datepicker', function(value) { $('#date1').text(value); });
+
+			new Datepicker(new Templates(), {elem: $('#datepicker2')})
+					.on('select.datepicker', function(value) { $('#date2').text(value); });
+
+			//TODO: можно раскомментировать это (и разметку ниже) и будет третий датепикер
+			//          new Datepicker(new Templates(), {elem: $('#datepicker3')})
+			//			.on('select.datepicker', function(value) { $('#date3').text(value); });
+		})
+	</script></head>
+<body>
+
+<script class='template' data-id='datepicker' type='text/html'>
+	<div class='datepicker clearfix'>
+		<div class='datepicker__header clearfix'>
+			<div class='datepicker__prev'>«</div>
+			<div class='datepicker__next'>»</div>
+			<div class='datepicker__title'>Выберите дату</div>
+		</div>
+		<div class='datepicker__body'>
+			<div class='datepicker__placeholder datepicker__placeholder_pos_left'></div>
+			<div class='datepicker__placeholder datepicker__placeholder_pos_right'></div>
+		</div>
+	</div>
+	</div>
+</script>
+
+<div id='date1'>Здесь будут дата и время</div><div id='datepicker1'></div>
+<br><br>
+<div id='date2'>Здесь будут дата и время</div><div id='datepicker2'></div>
+
+<!-- TODO: вот эта разметка нужна для третьего датепикера
+<br><br>
+<div id='date3'>Здесь будут дата и время</div><div id='datepicker3'></div>
+-->
+</body>
+</html>

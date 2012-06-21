@@ -1,0 +1,50 @@
+.calendar {
+	font-family: Arial;
+	font-size: 13px;
+	border: 1px solid #F1F1F1;
+	background-color: #EEEEEE;
+}
+
+.calendar__caption {
+	text-align: center;
+
+	background-color: #F9A736;
+	border: 1px solid #ddd;
+	padding: 5px 0;
+}
+
+.calendar__captionText{
+	display: inline-block;
+	padding: 3px 9px;
+	border-radius: 3px;
+	background-color: #fff;
+}
+
+.calendar__cell, .calendar__dateCell {
+	padding: 2px 5px;
+	text-align: center;
+}
+
+.calendar__dateCell{
+	font-size: 11px;
+	border: 1px solid #CCC;;
+	cursor: pointer;
+
+	background-color: #F6F6F6 ;
+	color: #1C94C4;
+}
+
+.calendar__dateCell:hover{
+	border: 1px solid #FED22F;
+	background-color:#FDF6D4 ;
+	color: #C77405;
+}
+
+.calendar__dateCell.calendar__dateCell_active_yes{
+	background-color: #FFF0A5;
+	color: black;
+}
+
+.calendar__cell {
+	font-weight: bold;
+}
